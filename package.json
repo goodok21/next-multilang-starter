@@ -10,6 +10,7 @@
     "build": "next build",
     "build-profile": "next build --profile",
     "start": "next start -p ${PORT:=3000}",
+    "analyze": "ANALYZE=true yarn build",
     "generate": "graphql-codegen --config codegen.js",
     "typecheck": "tsc --pretty --noEmit",
     "format": "prettier --write \"**/*.{js,ts,tsx}\"",
@@ -28,8 +29,12 @@
     ]
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^9.5.1",
+    "dotenv-load": "^2.0.0",
     "i18next": "^14.0.1",
     "next": "^9.5.1",
+    "next-compose-plugins": "^2.2.0",
+    "next-env": "^1.1.1",
     "next-i18next": "^6.0.1",
     "next-seo": "^4.7.3",
     "react": "^16.13.1",
@@ -50,6 +55,7 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.5",
+    "favicons-webpack-plugin": "^4.2.0",
     "globby": "^11.0.1",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
