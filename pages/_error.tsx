@@ -7,11 +7,11 @@ const Error = ({ statusCode, t }) => {
   return (
     <>
       {isNotFound ? (
-        <p>not found in error</p>
+        <p>{t('error-with-status', { statusCode })}</p>
       ) : statusCode ? (
-        <p>{`An error ${statusCode} occurred on server`}</p>
+        <p>{t('error-with-status', { statusCode })}</p>
       ) : (
-        <p>{'An error occurred on client'}</p>
+        <p>{t('error-without-status')}</p>
       )}
     </>
   );

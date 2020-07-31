@@ -1,0 +1,7 @@
+{
+  "h1": "пример",
+  "change-locale": "Сменить язык",
+  "to-second-page": "на 2ю страницу",
+  "error-with-status": "Ошибка {{statusCode}}",
+  "error-without-status": "Ошибка без статуса"
+}

@@ -10,7 +10,7 @@ const Homepage = ({ t }) => (
         <button
           type="button"
           onClick={() =>
-            i18n.changeLanguage(i18n.language === 'en' ? 'de' : 'en')
+            i18n.changeLanguage(i18n.language === 'en' ? 'ru' : 'en')
           }>
           {t('change-locale')}
         </button>
