@@ -6,7 +6,7 @@ import { appWithTranslation } from '@utils/i18n';
 import theme from '@utils/theme';
 import GlobalStyle from '@app/utils/globalStyle';
 
-class NextApp extends App<{}> {
+class NextApp extends App {
   public static displayName = 'NextApp';
 
   public render() {
