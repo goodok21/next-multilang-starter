@@ -1,5 +1,6 @@
 # Service Worker generated
-public/pwa/*
+public/service-worker.js
+public/workbox-*
 
 # Favicons generated
 public/assets/*

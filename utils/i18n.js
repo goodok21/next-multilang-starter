@@ -7,5 +7,12 @@ module.exports = new NextI18Next({
   otherLanguages: ['ru'],
   localeSubpaths: getConfig.default().publicRuntimeConfig.localeSubpaths,
   localePath: path.resolve('./public/locales'),
-  ignoreRoutes: ['/_next/', '/static/', '/api/', '/locales', '/assets'],
+  ignoreRoutes: [
+    '/_next/',
+    '/static/',
+    '/api/',
+    '/locales',
+    '/assets',
+    '/service-worker.js',
+  ],
 });
