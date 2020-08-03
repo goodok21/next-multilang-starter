@@ -4,14 +4,15 @@ import { ThemeProvider } from 'styled-components';
 
 import { appWithTranslation } from '@utils/i18n';
 import theme from '@utils/theme';
-import GlobalStyle from '@app/utils/globalStyle';
+import GlobalStyle from '@utils/globalStyle';
 
+import GlobalHeadMeta from '@components/GlobalHeadMeta';
 import ErrorComponent from './_error';
 
 class NextApp extends App {
   public static displayName = 'NextApp';
 
-  static async getInitialProps({ Component, router, ctx }) {
+  static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
 
     // Do as little as possible when rendering the error page, in case something
@@ -42,10 +43,8 @@ class NextApp extends App {
     return (
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
+        {/* Uncomment after Favicons generated */}
+        {/* <GlobalHeadMeta /> */}
         <GlobalStyle />
       </ThemeProvider>
     );

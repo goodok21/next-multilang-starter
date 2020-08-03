@@ -1,3 +1,14 @@
+# Service Worker generated
+public/pwa/*
+
+# Favicons generated
+public/assets/*
+
+# Env files
+.env.local
+.env.development.local
+.env.production.local
+
 # Dependencies
 node_modules
 
@@ -8,6 +19,7 @@ yarn-error.log
 dist
 build
 .next
+out
 
 # OS
 .DS_Store

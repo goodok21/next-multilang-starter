@@ -1,7 +1,15 @@
-import React from 'react';
+import { NextPage } from 'next';
 import { withTranslation } from '@utils/i18n';
+import { WithTranslation } from 'next-i18next';
 
-const Error = ({ statusCode, t }) => {
+type ErrorType = NextPage &
+  React.FC<
+    WithTranslation & {
+      readonly statusCode?: number;
+    }
+  >;
+
+const Error: ErrorType = ({ statusCode, t }) => {
   const isNotFound = statusCode && statusCode === 404;
 
   return (

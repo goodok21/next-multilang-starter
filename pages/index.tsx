@@ -1,11 +1,11 @@
+import { NextPage } from 'next';
+import Layout from '@components/Layout';
 import { i18n, Link, withTranslation } from '@utils/i18n';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { WithTranslation } from 'next-i18next';
 
-const Homepage = ({ t }) => (
-  <>
-    <main>
-      <Header title={t('h1')} />
+const Homepage: NextPage & React.FC<WithTranslation> = ({ t }) => {
+  return (
+    <Layout>
       <div>
         <button
           type="button"
@@ -18,13 +18,14 @@ const Homepage = ({ t }) => (
           <button type="button">{t('to-second-page')}</button>
         </Link>
       </div>
-    </main>
-    <Footer />
-  </>
-);
+    </Layout>
+  );
+};
 
-Homepage.getInitialProps = async () => ({
-  namespacesRequired: ['common', 'footer'],
-});
+Homepage.getInitialProps = async () => {
+  return {
+    namespacesRequired: ['common', 'footer'],
+  };
+};
 
 export default withTranslation('common')(Homepage);
