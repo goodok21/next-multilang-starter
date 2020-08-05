@@ -16,13 +16,14 @@
     "jsx": "preserve",
     "removeComments": true,
     "sourceMap": false,
-    "typeRoots": ["./types"],
+    "typeRoots": ["src/typesypes"],
     "baseUrl": "./",
 
     "paths": {
-      "@app/*": ["./*"],
-      "@components/*": ["./components/*"],
-      "@utils/*": ["./utils/*"]
+      "@app/*": ["./src/*"],
+      "@components/*": ["src/components/*"],
+      "@utils/*": ["src/utils/*"],
+      "@hooks/*": ["src/hooks/*"]
     }
   },
   "include": ["next-env.d.ts", "next.config.js", "**/*.ts", "**/*.tsx"],

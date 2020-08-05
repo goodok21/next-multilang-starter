@@ -22,6 +22,12 @@
 
 #### Environment variables:
 
+Use `.env` for public envs:
+
+```
+NEXT_PUBLIC_GQL_ENDPOINT=https://graphql-pokemon.now.sh
+```
+
 Use `.env.local` file for local development.
 Prefixes:
 `NEXT_PUBLIC_`

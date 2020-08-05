@@ -1,7 +1,7 @@
 import Layout from '@components/Layout';
 import { WithTranslation } from 'next-i18next';
 import { i18n, Link, withTranslation } from '@utils/i18n';
-import useQuery from '@app/hooks/useQuery';
+import useQuery from '@hooks/useQuery';
 import pokemonsGql from './pokemons.gql';
 
 const Homepage: React.FC<WithTranslation> = ({ t }) => {

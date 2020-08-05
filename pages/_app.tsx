@@ -8,7 +8,7 @@ import { appWithTranslation } from '@utils/i18n';
 import theme from '@utils/theme';
 import GlobalStyle from '@utils/globalStyle';
 
-import GlobalHeadMeta from '@components/GlobalHeadMeta';
+import GlobalHeadMeta from '@app/components/GlobalHeadMeta';
 import ErrorComponent from './_error';
 
 const NextApp = ({ Component, pageProps, graphql }) => {
