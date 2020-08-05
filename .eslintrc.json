@@ -22,7 +22,6 @@
   "parser": "@typescript-eslint/parser",
   "rules": {
     "react/react-in-jsx-scope": 0,
-
     "@typescript-eslint/no-var-requires": "off",
     "react/self-closing-comp": [
       "error",

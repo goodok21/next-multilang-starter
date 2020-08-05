@@ -12,12 +12,12 @@
 
 ### Todo:
 
-- [ ] update `next-i18next` package later because it's import too much 
+- [ ] update `next-i18next` package later because it's import too much
 - [ ] add markdown support
 - [ ] sitemap generation
 - [ ] fix favicons
 - [ ] add favicon generation?
-- [ ] graphql support
+- [x] graphql support
 - [ ] style pages
 
 #### Environment variables:

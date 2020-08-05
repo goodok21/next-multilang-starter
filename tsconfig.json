@@ -25,6 +25,6 @@
       "@utils/*": ["./utils/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["dist", ".next", "out", "next.config.js", "node_modules"]
+  "include": ["next-env.d.ts", "next.config.js", "**/*.ts", "**/*.tsx"],
+  "exclude": ["dist", ".next", "out", "node_modules"]
 }
