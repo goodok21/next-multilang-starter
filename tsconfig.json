@@ -27,5 +27,11 @@
     }
   },
   "include": ["next-env.d.ts", "next.config.js", "**/*.ts", "**/*.tsx"],
-  "exclude": ["dist", ".next", "out", "node_modules"]
+  "exclude": [
+    "dist",
+    ".next",
+    "out",
+    "node_modules",
+    "pages/api/nexus-typegen.ts"
+  ]
 }
