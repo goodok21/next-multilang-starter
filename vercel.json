@@ -1,18 +1,11 @@
 {
   "version": 2,
-  "env": {
-    "DATABASE_URL": "@database_url"
-  },
-  "build": {
-    "env": {
-      "DATABASE_URL": "@database_url"
-    }
-  },
   "routes": [
     {
       "src": "/api",
       "methods": ["POST", "PUT"],
-      "dest": "/api"
+      "dest": "/api",
+      "headers": { "cache-control": "s-maxage=3600" }
     }
   ]
 }
