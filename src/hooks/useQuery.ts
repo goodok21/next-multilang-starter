@@ -1,6 +1,6 @@
 import { useGraphQL } from 'graphql-react';
 
-const useQuery: any = ({ query, ...props }) =>
+const useQuery = ({ query = '', variables = {}, ...props }) =>
   useGraphQL({
     // Any GraphQL API can be queried in components, where fetch options for
     // the URL, auth headers, etc. are specified. To avoid repetition it’s a
@@ -18,6 +18,7 @@ const useQuery: any = ({ query, ...props }) =>
     // GraphQL server in the fetch request body.
     operation: {
       query,
+      variables,
     },
 
     // Load the query whenever the component mounts. This is desirable for

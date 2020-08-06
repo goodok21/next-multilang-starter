@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppContext } from 'next/app';
 import { ThemeProvider } from 'styled-components';
-import { GraphQLProvider } from 'graphql-react';
+import { GraphQLContext } from 'graphql-react';
 import { withGraphQLApp } from 'next-graphql-react';
 
 import { appWithTranslation } from '@utils/i18n';
@@ -13,14 +13,14 @@ import ErrorComponent from './_error';
 
 const NextApp = ({ Component, pageProps, graphql }) => {
   return (
-    <GraphQLProvider graphql={graphql}>
+    <GraphQLContext.Provider value={graphql}>
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
         {/* Uncomment after Favicons generated */}
         {/* <GlobalHeadMeta /> */}
         <GlobalStyle />
       </ThemeProvider>
-    </GraphQLProvider>
+    </GraphQLContext.Provider>
   );
 };
 

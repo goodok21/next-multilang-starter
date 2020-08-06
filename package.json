@@ -11,6 +11,9 @@
     "build-profile": "next build --profile",
     "start": "yarn build && next start -p ${PORT:=3000}",
     "analyze": "ANALYZE=true yarn build",
+    "generate": "yarn generate:prisma && yarn generate:nexus",
+    "generate:prisma": "prisma generate",
+    "generate:nexus": "ts-node --transpile-only -P nexus.tsconfig.json pages/api",
     "typecheck": "tsc --pretty --noEmit",
     "format": "prettier --write \"**/*.{js,ts,tsx}\"",
     "lint": "eslint . --ext ts --ext tsx --ext js --fix"
@@ -29,7 +32,11 @@
   },
   "dependencies": {
     "@next/bundle-analyzer": "^9.5.1",
+    "@nexus/schema": "^0.15.0",
+    "@prisma/client": "^2.4.1",
+    "apollo-server-micro": "^2.16.1",
     "dotenv-load": "^2.0.0",
+    "graphql-iso-date": "^3.6.1",
     "graphql-react": "^11.0.4",
     "i18next": "^14.0.1",
     "next": "^9.5.1",
@@ -39,11 +46,15 @@
     "next-i18next": "^6.0.1",
     "next-pwa": "^3.1.1",
     "next-seo": "^4.7.3",
+    "nexus-prisma": "^0.16.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
+    "@prisma/cli": "^2.4.1",
+    "@types/graphql": "^14.5.0",
+    "@types/graphql-react": "^8.1.1",
     "@types/i18next": "^13.0.0",
     "@types/node": "^14.0.27",
     "@types/react": "^16.9.43",

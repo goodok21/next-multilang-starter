@@ -1,8 +1,12 @@
 export default /* GraphQL */ `
   {
-    pokemon(name: "Pikachu") {
-      name
-      image
+    post(postId: "1") {
+      id
+      title
+      content
+      author {
+        id
+      }
     }
   }
 `;

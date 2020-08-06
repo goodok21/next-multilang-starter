@@ -11,6 +11,7 @@ module.exports = new NextI18Next({
     '/_next/',
     '/static/',
     '/api/',
+    '/graphql',
     '/locales',
     '/assets',
     '/service-worker.js',
