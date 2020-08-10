@@ -1,3 +1,7 @@
+# Server Nexus API
+pages/api/nexus-typegen.ts
+pages/api/schema.graphql
+
 # Service Worker generated
 public/service-worker.js
 public/workbox-*

@@ -9,7 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "build-profile": "next build --profile",
-    "start": "yarn build && next start -p ${PORT:=3000}",
+    "start": "next start -p ${PORT:=3000}",
     "analyze": "ANALYZE=true yarn build",
     "generate": "yarn generate:prisma && yarn generate:nexus",
     "generate:prisma": "prisma generate",
